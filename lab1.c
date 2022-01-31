@@ -6,7 +6,7 @@
  * @author Kassidy Maberry
  * @date 1/31/22
  * @bug none currently
- * @todo code basic 11 functions currently.
+ * @todo IO function needed
  */
 
 
@@ -17,18 +17,28 @@
 int area_rectangle(int len, int wid);
 int perimeter_rectangle(int len, int wid);
 float perimeter_triangle(int len, int wid);
-float hypotenuse(float opp, float adj);
+float hypotenuse(int opp, int adj);
 float area_triangle(int hei, int base);
-float area_circle(float radi);
-float circumference(float radi);
+float area_circle(int radi);
+float circumference(int radi);
 float diagonal_rectangle(int len, int wid);
-double exterior_angle(int angles);
-double interior_angle(int angles);
-double area_regular_polygon(float side, int angles);
+float exterior_angle(int angles);
+float interior_angle(int angles);
+float area_regular_polygon(int side, int angles);
 
 int main(void)
 {
-
+        printf("%d Arect\n", area_rectangle(2, 3));
+        printf("%d Prect\n", perimeter_rectangle(2, 3));
+        printf("%f Ptri\n", perimeter_triangle(2,3));
+        printf("%f Hypo\n", hypotenuse(2, 3));
+        printf("%f Atri\n", area_triangle(2,3));
+        printf("%f Acir\n", area_circle(4));
+        printf("%f Circum\n", circumference(4));
+        printf("%f Diarect\n", diagonal_rectangle(2,3));
+        printf("%f Exang\n", exterior_angle(6));
+        printf("%f Inang\n", interior_angle(6));
+        printf("%f Aregpoly\n", area_regular_polygon(5, 6));
         return 0;
 }
 
@@ -43,12 +53,12 @@ int perimeter_rectangle(int len, int wid)
         return 2 * len + 2 * wid;
 }
 
-float hypotenuse (float opp, float adj)
+float hypotenuse (int opp, int adj)
 {
         return sqrt(pow(opp, 2) + pow(adj, 2));
 }
 
-float perimeter_triangle(float hei, float base)
+float perimeter_triangle(int hei, int base)
 {
         return hypotenuse(hei,base) + hei + base;
 }
@@ -58,12 +68,12 @@ float area_triangle(int hei, int base)
         return (hei*base)/2;
 }
 
-float area_circle(float radi)
+float area_circle(int radi)
 {
         return M_PI * pow(radi, 2);
 }
 
-float circumference(float radi)
+float circumference(int radi)
 {
         return 2 * M_PI * radi;
 }
@@ -73,18 +83,18 @@ float diagonal_rectangle(int len, int wid)
         return hypotenuse(len, wid);
 }
 
-double exterior_angle(int angles)
+float exterior_angle(int angles)
 {
         return 360/angles;
 }
 
-double interior_angle(int angles)
+float interior_angle(int angles)
 {
         return 180 * (angles-2);
 }
 
 
-double area_regular_polygon(float side, int angles)
+float area_regular_polygon(int side, int angles)
 {
-        return (interior_angle(angles) / (4 * tan(M_pi / side)));
+        return (interior_angle(angles) / (4 * tan(M_PI / side)));
 }
