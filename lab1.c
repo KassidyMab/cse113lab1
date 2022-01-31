@@ -13,6 +13,19 @@
 #include <stdio.h>
 #include <math.h>
 
+
+int area_rectangle(int len, int wid);
+int perimeter_rectangle(int len, int wid);
+float perimeter_triangle(int len, int wid);
+float hypotenuse(float opp, float adj);
+float area_triangle(int hei, int base);
+float area_circle(float radi);
+float circumference(float radi);
+float diagonal_rectangle(int len, int wid);
+double exterior_angle(int angles);
+double interior_angle(int angles);
+double area_regular_polygon(float side, int angles);
+
 int main(void)
 {
 
@@ -50,7 +63,7 @@ float area_circle(float radi)
         return M_PI * pow(radi, 2);
 }
 
-float area_circle(float radi)
+float circumference(float radi)
 {
         return 2 * M_PI * radi;
 }
