@@ -15,12 +15,9 @@
 
 int main(void)
 {
-        
-
 
         return 0;
 }
-
 
 int area_rectangle(int len, int wid)
 {
@@ -70,5 +67,11 @@ double exterior_angle(int angles)
 
 double interior_angle(int angles)
 {
-        return 0.0;
+        return 180 * (angles-2);
+}
+
+
+double area_regular_polygon(float side, int angles)
+{
+        return (interior_angle(angles) / (4 * tan(M_pi / side)));
 }
