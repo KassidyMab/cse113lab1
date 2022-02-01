@@ -25,9 +25,11 @@ float diagonal_rectangle(int len, int wid);
 float exterior_angle(int angles);
 float interior_angle(int angles);
 float area_regular_polygon(int side, int angles);
+int prompt(int request);
 
 int main(void)
 {
+        /*
         printf("%d Arect\n", area_rectangle(2, 3));
         printf("%d Prect\n", perimeter_rectangle(2, 3));
         printf("%f Ptri\n", perimeter_triangle(2,3));
@@ -39,6 +41,8 @@ int main(void)
         printf("%f Exang\n", exterior_angle(6));
         printf("%f Inang\n", interior_angle(6));
         printf("%f Aregpoly\n", area_regular_polygon(5, 6));
+        */
+        prompt(1);
         return 0;
 }
 
@@ -97,4 +101,12 @@ float interior_angle(int angles)
 float area_regular_polygon(int side, int angles)
 {
         return (interior_angle(angles) / (4 * tan(M_PI / side)));
+}
+
+int prompt(int request)
+{
+        switch (request) {
+                case request == 1
+                        printf("Case 1")
+        }
 }
