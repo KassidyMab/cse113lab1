@@ -30,20 +30,34 @@ int prompt(int request);
 int main(void)
 {
         int rect;
-        int stand;
-        int pone;
-        int ptwo;
-        printf("%d Arect\n", area_rectangle(2, 3));
+        float stand;        
+
+        printf("Solving for the area of a rectangle.");
+        rect = area_rectangle(prompt(1), prompt(2));
+        printf("The area of your rectangle is: %d\n", area_rectangle(2, 3));
+
+        printf("Solving for the perimeter of a rectangle.");
+        rect = area_rectangle(prompt(1), prompt(2));
         printf("%d Prect\n", perimeter_rectangle(2, 3));
+
         printf("%f Ptri\n", perimeter_triangle(2,3));
+
         printf("%f Hypo\n", hypotenuse(2, 3));
+
         printf("%f Atri\n", area_triangle(2,3));
+
         printf("%f Acir\n", area_circle(4));
+
         printf("%f Circum\n", circumference(4));
+
         printf("%f Diarect\n", diagonal_rectangle(2,3));
+
         printf("%f Exang\n", exterior_angle(6));
+
         printf("%f Inang\n", interior_angle(6));
+
         printf("%f Aregpoly\n", area_regular_polygon(5, 6));
+
         return 0;
 }
 
