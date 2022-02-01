@@ -6,7 +6,7 @@
  * @author Kassidy Maberry
  * @date 1/31/22
  * @bug none currently
- * @todo IO function needed
+ * @todo Finish the main function, add comments, and doxygenize.
  */
 
 
@@ -29,7 +29,10 @@ int prompt(int request);
 
 int main(void)
 {
-        /*
+        int rect;
+        int stand;
+        int pone;
+        int ptwo;
         printf("%d Arect\n", area_rectangle(2, 3));
         printf("%d Prect\n", perimeter_rectangle(2, 3));
         printf("%f Ptri\n", perimeter_triangle(2,3));
@@ -41,8 +44,6 @@ int main(void)
         printf("%f Exang\n", exterior_angle(6));
         printf("%f Inang\n", interior_angle(6));
         printf("%f Aregpoly\n", area_regular_polygon(5, 6));
-        */
-        prompt(1);
         return 0;
 }
 
@@ -82,7 +83,7 @@ float circumference(int radi)
         return 2 * M_PI * radi;
 }
 
-float diagonal_rectangle(int len, int wid)
+float diagonal_rectangle(int len , int wid)
 {
         return hypotenuse(len, wid);
 }
@@ -105,8 +106,32 @@ float area_regular_polygon(int side, int angles)
 
 int prompt(int request)
 {
+        int val;
         switch (request) {
-                case request == 1
-                        printf("Case 1")
-        }
+                case (1):
+                        printf("Length: ");
+                        break;
+
+                case(2):
+                        printf("Width: ");
+                        break;
+
+                case(3):
+                        printf("Base: ");
+                        break;
+                case(4):
+                        printf("Height: ");
+                        break;
+                case(5):
+                        printf("Radius: ");
+                        break;
+                case(6):
+                        printf("Angles: ");
+                        break;
+                default:
+                        printf("This shouldn't appear");
+                        break;
+                }
+        scanf("%d", &val);
+        return val;
 }
