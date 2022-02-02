@@ -6,7 +6,7 @@
  * @author Kassidy Maberry
  * @date 1/31/22
  * @bug none currently
- * @todo Finish the main function, add comments, and doxygenize.
+ * @todo Add comments and doxygenize.
  */
 
 
@@ -32,31 +32,49 @@ int main(void)
         int rect;
         float stand;        
 
-        printf("Solving for the area of a rectangle.");
+        printf("Solving for the perimeter of a rectangle.\n");
+        rect = perimeter_rectangle(prompt(1), prompt(2));
+        printf("The perimeter of your rectangle is: %d\n", rect);
+
+        printf("Solving for the perimeter of a rectangle.\n");
         rect = area_rectangle(prompt(1), prompt(2));
-        printf("The area of your rectangle is: %d\n", area_rectangle(2, 3));
+        printf("The area of your rectangle is: %d\n", rect);
 
-        printf("Solving for the perimeter of a rectangle.");
-        rect = area_rectangle(prompt(1), prompt(2));
-        printf("%d Prect\n", perimeter_rectangle(2, 3));
+        printf("Solving for the perimter of a triangle.\n");
+        stand = perimeter_triangle(prompt(4),prompt(3));
+        printf("The perimeter of your triangle is: %f\n", stand);
 
-        printf("%f Ptri\n", perimeter_triangle(2,3));
+        printf("Solving for the hypotenuse.\n");
+        stand = hypotenuse(prompt(4),prompt(3));
+        printf("The hypotenuse is: %f\n", stand);
 
-        printf("%f Hypo\n", hypotenuse(2, 3));
+        printf("Solving for the area of a triangle.\n");
+        stand = area_triangle(prompt(4),prompt(3));
+        printf("The area of your triangle is: %f\n", stand);
 
-        printf("%f Atri\n", area_triangle(2,3));
+        printf("Solving for the area of a circle.\n");
+        stand = area_circle(prompt(5));
+        printf("The area of your circle is: %f\n", stand);
 
-        printf("%f Acir\n", area_circle(4));
+        printf("Solving for the circumference of a circle.\n");
+        stand = circumference(prompt(5));
+        printf("The circumference of your circle is: %f\n", stand);
 
-        printf("%f Circum\n", circumference(4));
+        printf("Solving for the area of a diagonal rectangle.\n");
+        stand = diagonal_rectangle(prompt(1),prompt(2));
+        printf("The area of your rectangle is: %f\n", stand);
 
-        printf("%f Diarect\n", diagonal_rectangle(2,3));
+        printf("Solving for the exterior angle.\n");
+        stand = exterior_angle(prompt(6));
+        printf("The angle of the an exterior is: %f\n", stand);
 
-        printf("%f Exang\n", exterior_angle(6));
+        printf("Solving for the interior angle.\n");
+        stand = interior_angle(prompt(6));
+        printf("The degrees of the interior angles is: %f\n", stand);
 
-        printf("%f Inang\n", interior_angle(6));
-
-        printf("%f Aregpoly\n", area_regular_polygon(5, 6));
+        printf("Solving for the area of a regular polygon.\n");
+        stand = area_regular_polygon(prompt(1), prompt(6));
+        printf("The area of a regular polygon is: %f\n", stand);
 
         return 0;
 }
