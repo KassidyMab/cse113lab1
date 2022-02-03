@@ -9,9 +9,8 @@
  * 
  * @author Kassidy Maberry
  * @date 1/31/22
- * @bug Reg polygons asks for the len instead of hieght. Interior angles
- * needs to be checked
- * @todo Debug
+ * @bug None currently known
+ * @todo Finished
  */
 
 
@@ -41,7 +40,7 @@ int main(void)
         rect = perimeter_rectangle(prompt(1), prompt(2));
         printf("The perimeter of your rectangle is: %d\n", rect);
 
-        printf("Solving for the perimeter of a rectangle.\n");
+        printf("Solving for the area of a rectangle.\n");
         rect = area_rectangle(prompt(1), prompt(2));
         printf("The area of your rectangle is: %d\n", rect);
 
@@ -65,9 +64,9 @@ int main(void)
         stand = circumference(prompt(5));
         printf("The circumference of your circle is: %f\n", stand);
 
-        printf("Solving for the area of a diagonal rectangle.\n");
-        stand = diagonal_rectangle(prompt(1),prompt(2));
-        printf("The area of your rectangle is: %f\n", stand);
+        printf("Solving for the length of a diagonal rectangle.\n");
+        stand = diagonal_rectangle(prompt(4),prompt(2));
+        printf("The length of your rectangle is: %f\n", stand);
 
         printf("Solving for the exterior angle.\n");
         stand = exterior_angle(prompt(6));
@@ -75,7 +74,7 @@ int main(void)
 
         printf("Solving for the interior angle.\n");
         stand = interior_angle(prompt(6));
-        printf("The degrees of the interior angles is: %f\n", stand);
+        printf("The degrees of an interior angles is: %f\n", stand);
 
         printf("Solving for the area of a regular polygon.\n");
         stand = area_regular_polygon(prompt(1), prompt(6));
@@ -138,7 +137,7 @@ float perimeter_triangle(int hei, int base)
  */
 float area_triangle(int hei, int base)
 {
-        return (hei*base)/2;
+        return (hei*base)*.5;
 }
 
 /**
@@ -189,7 +188,9 @@ float exterior_angle(int angles)
  */
 float interior_angle(int angles)
 {
-        return 180 * (angles-2);
+        float ans = 180 * (angles-2);
+        printf("The sum of %d angles is: %f\n", angles, ans);
+        return ans/angles;
 }
 
 /**
@@ -200,7 +201,7 @@ float interior_angle(int angles)
  */
 float area_regular_polygon(int side, int angles)
 {
-        return (interior_angle(angles) / (4 * tan(M_PI / side)));
+        return (pow(side, 2) * angles / (4 * tan(M_PI / side)));
 }
 
 

@@ -1,0 +1,48 @@
+Script started on 2022-02-02 22:16:03-07:00 [TERM="xterm-256color" TTY="/dev/pts/0" COLUMNS="80" LINES="24"]
+[?2004h]0;kas@pop-os: ~/work/cse113/labs/lab1[01;32mkas@pop-os[00m:[01;34m~/work/cse113/labs/lab1[00m$ gcc -Wall[K[K[K[Kg -Wall ./lab1.c -lm -o ./lab1[K[K[K[K[K[K[K[K[K[K
+[?2004l[?2004h]0;kas@pop-os: ~/work/cse113/labs/lab1[01;32mkas@pop-os[00m:[01;34m~/work/cse113/labs/lab1[00m$ a.[K[K./a.out 
+[?2004lSolving for the perimeter of a rectangle.
+Width: 2
+Length: 3
+The perimeter of your rectangle is: 10
+Solving for the area of a rectangle.
+Width: 2
+Length: 3
+The area of your rectangle is: 6
+Solving for the perimter of a triangle.
+Base: 2
+Height: 3
+The perimeter of your triangle is: 8.605551
+Solving for the hypotenuse.
+Base: 2
+Height: 3
+The hypotenuse is: 3.605551
+Solving for the area of a triangle.
+Base: 2
+Height: 3
+The area of your triangle is: 3.000000
+Solving for the area of a circle.
+Radius: 5
+The area of your circle is: 78.539818
+Solving for the circumference of a circle.
+Radius: 5
+The circumference of your circle is: 31.415926
+Solving for the length of a diagonal rectangle.
+Width: 2
+Height: 3
+The length of your rectangle is: 3.605551
+Solving for the exterior angle.
+Angles: 5
+The angle of the an exterior is: 72.000000
+Solving for the interior angle.
+Angles: 5
+The sum of 5 angles is: 540.000000
+The degrees of an interior angles is: 108.000000
+Solving for the area of a regular polygon.
+Angles: 5
+Length: 3
+The area of a regular polygon is: 6.495191
+[?2004h]0;kas@pop-os: ~/work/cse113/labs/lab1[01;32mkas@pop-os[00m:[01;34m~/work/cse113/labs/lab1[00m$ exit
+[?2004lexit
+
+Script done on 2022-02-02 22:17:34-07:00 [COMMAND_EXIT_CODE="0"]
